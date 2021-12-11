@@ -12,16 +12,16 @@ variable cidr_block {
 }
 
 variable compartment_id {
- default = "ocid1.compartment.oc1..aaaaaaaazrsru2d6smxolkfwvtym5rslplrhvr3jrbartiaqcleyutr73msa"
+ default = "myoci_compartment"
 }
 
 
 variable instance_display_name_id {
- default = "CentOS"
+ default = "LinuxOS"
 }
 
 variable vcn_display_name_id {
- default = "dnsCentos"
+ default = "dnsKSQ"
 }
 
 variable subnet_cidr_block {
@@ -29,13 +29,22 @@ variable subnet_cidr_block {
 }
 
 variable subnet_display_name {
- default = "subCentos"
+ default = "subKSQ"
 }
 
 variable subnet_dns_name {
- default = "dnsubCentos"
+ default = "dnsubKSQ"
 }
 
 variable image {
-default = "ocid1.image.oc1.us-sanjose-1.aaaaaaaahpitk7yc2u7tnujas2lgh2c6wnazujerfmfn4zol22grj3oaayna"
+
+default = "ocid1.image.oc1.us-sanjose-1.aaaaaaaact3ovmljern74ankjeb57iervxvlpcvqiqoahtkkswb7h4sfkcuq"
+}
+
+variable "service_ports"{
+ default = [80,443,22]
+}
+
+variable "private_key_path" {
+default = "/home/keys/eitan.pem"
 }
